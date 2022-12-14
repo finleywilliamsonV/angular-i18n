@@ -3,7 +3,7 @@
   <div class="row mt-5">
     <div class="col text-center">
       <div
-        i18n
+        i18n="@@page-title"
         class="display-1">
         Hello and Welcome!
       </div>
@@ -13,7 +13,7 @@
   <div class="row mt-5 text-center">
     <div class="col">
       <h3
-        i18n
+        i18n="@@page-subheading"
         [style.font-weight]="'300'">
         In this app, I'll be exporing Angular's internationalization and localization features
       </h3>
@@ -28,27 +28,27 @@
         <thead>
           <tr>
             <th
-              i18n
+              i18n="@@transaction-label-date"
               scope="col">
               Date
             </th>
             <th
-              i18n
+              i18n="@@transaction-label-amount"
               scope="col">
               Amount
             </th>
             <th
-              i18n
+              i18n="@@transaction-label-description"
               scope="col">
               Description
             </th>
             <th
-              i18n
+              i18n="@@transaction-label-price"
               scope="col">
               Price
             </th>
             <th
-              i18n
+              i18n="@@transaction-label-subtotal"
               scope="col">
               Subtotal
             </th>
@@ -58,24 +58,20 @@
           <tr *ngFor="let transaction of order">
             <td>{{transaction.date | date: 'M/d/yy'}}</td>
             <td>{{transaction.amount}}</td>
-            <td i18n>{{transaction.description}}</td>
-            <td i18n>{{transaction.price | currency}}</td>
-            <td i18n>{{getSubtotal(transaction) | currency}}</td>
+            <td>{{transaction.description}}</td>
+            <td>{{transaction.price | currency}}</td>
+            <td>{{getSubtotal(transaction) | currency}}</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
             <td colspan="3"></td>
             <th
-              i18n
+              i18n="@@transaction-label-total"
               scope="row">
               TOTAL:
             </th>
-            <td
-              i18n
-              class="fw-bold">
-              {{getTotal(order) | currency}}
-            </td>
+            <td class="fw-bold">{{getTotal(order) | currency}}</td>
           </tr>
         </tfoot>
       </table>
@@ -86,9 +82,9 @@
     <div class="col">
       <img
         id="artist-svg"
-        i18n-alt
+        i18n-alt="@@image-alt"
         alt="image of an artist"
-        i18n-title
+        i18n-title="@@image-title"
         title="An Artist"
         src="assets/artist.svg">
     </div>

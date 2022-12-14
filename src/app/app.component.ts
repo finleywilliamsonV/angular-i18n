@@ -8,22 +8,9 @@ import { Order, Transaction } from './shared/models/order.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title: string = 'Hello and Welcome!';
   order: Order = EXAMPLE_ORDER;
 
-  constructor() {
-    // used for localization at runtime
-    this.title = this.localizeTitle();
-  }
-
-  /**
-   * Localizes a title string to the current locale
-   * @param newTitle the new title you would like to localize
-   * @returns the localized title
-   */
-  localizeTitle(newTitle: string = this.title): string {
-    return $localize`${newTitle}`;
-  }
+  constructor() {}
 
   /**
    * Gets the subtotal for a given transaction
