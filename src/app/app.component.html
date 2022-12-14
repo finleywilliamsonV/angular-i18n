@@ -55,33 +55,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{{"12/14/2022" | date: 'M/d/yy'}}</td>
-            <td>12</td>
-            <td i18n>2" Flat Brushes</td>
-            <td i18n>{{"8.99" | currency}}</td>
-            <td i18n>{{"107.88" | currency}}</td>
-          </tr>
-          <tr>
-            <td>-</td>
-            <td>4</td>
-            <td i18n>Pads of Watercolor Paper</td>
-            <td i18n>{{"23.49" | currency}}</td>
-            <td i18n>{{"93.96" | currency}}</td>
-          </tr>
-          <tr>
-            <td>-</td>
-            <td>12</td>
-            <td i18n>Watercolor Palettes</td>
-            <td i18n>{{"9.99" | currency}}</td>
-            <td i18n>{{"119.88" | currency}}</td>
-          </tr>
-          <tr>
-            <td>-</td>
-            <td>2</td>
-            <td i18n>12 Color Watercolor Paint Set</td>
-            <td i18n>{{"28.55" | currency}}</td>
-            <td i18n>{{"57.10" | currency}}</td>
+          <tr *ngFor="let transaction of order">
+            <td>{{transaction.date | date: 'M/d/yy'}}</td>
+            <td>{{transaction.amount}}</td>
+            <td i18n>{{transaction.description}}</td>
+            <td i18n>{{transaction.price | currency}}</td>
+            <td i18n>{{getSubtotal(transaction) | currency}}</td>
           </tr>
         </tbody>
         <tfoot>
@@ -95,7 +74,7 @@
             <td
               i18n
               class="fw-bold">
-              {{"378.82" | currency}}
+              {{getTotal(order) | currency}}
             </td>
           </tr>
         </tfoot>
