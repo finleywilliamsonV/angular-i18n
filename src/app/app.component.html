@@ -2,14 +2,20 @@
 
   <div class="row mt-5">
     <div class="col text-center">
-      <div class="display-1">Hello and Welcome!</div>
+      <div
+        i18n
+        class="display-1">
+        Hello and Welcome!
+      </div>
     </div>
   </div>
 
   <div class="row mt-5 text-center">
     <div class="col">
-      <h3 [style.font-weight]="'300'">
-        In this app, I'll be exporing Angualar's internationalization and localization features
+      <h3
+        i18n
+        [style.font-weight]="'300'">
+        In this app, I'll be exporing Angular's internationalization and localization features
       </h3>
     </div>
   </div>
@@ -21,48 +27,76 @@
         class="table table-primary table-striped text-center mx-auto table-bordered">
         <thead>
           <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Amount</th>
-            <th scope="col">Description</th>
-            <th scope="col">Price</th>
-            <th scope="col">Subtotal</th>
+            <th
+              i18n
+              scope="col">
+              Date
+            </th>
+            <th
+              i18n
+              scope="col">
+              Amount
+            </th>
+            <th
+              i18n
+              scope="col">
+              Description
+            </th>
+            <th
+              i18n
+              scope="col">
+              Price
+            </th>
+            <th
+              i18n
+              scope="col">
+              Subtotal
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>12/14/2022</td>
-            <td>12</td>
-            <td>2" Flat Brushes</td>
-            <td>$8.99</td>
-            <td>$107.88</td>
+            <td>{{"12/14/2022" | date}}</td>
+            <td i18n>12</td>
+            <td i18n>2" Flat Brushes</td>
+            <td i18n>{{"8.99" | currency}}</td>
+            <td i18n>{{"107.88" | currency}}</td>
           </tr>
           <tr>
             <td>-</td>
-            <td>4</td>
-            <td>Pads of Watercolor Paper</td>
-            <td>$23.49</td>
-            <td>$93.96</td>
+            <td i18n>4</td>
+            <td i18n>Pads of Watercolor Paper</td>
+            <td i18n>{{"23.49" | currency}}</td>
+            <td i18n>{{"93.96" | currency}}</td>
           </tr>
           <tr>
             <td>-</td>
-            <td>12</td>
-            <td>Watercolor Palettes</td>
-            <td>$9.99</td>
-            <td>$119.88</td>
+            <td i18n>12</td>
+            <td i18n>Watercolor Palettes</td>
+            <td i18n>{{"9.99" | currency}}</td>
+            <td i18n>{{"119.88" | currency}}</td>
           </tr>
           <tr>
             <td>-</td>
-            <td>2</td>
-            <td>12 Color Watercolor Paint Set</td>
-            <td>$28.55</td>
-            <td>$57.10</td>
+            <td i18n>2</td>
+            <td i18n>12 Color Watercolor Paint Set</td>
+            <td i18n>{{"28.55" | currency}}</td>
+            <td i18n>{{"57.10" | currency}}</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
             <td colspan="3"></td>
-            <th scope="row">TOTAL:</th>
-            <td class="fw-bold">$378.82</td>
+            <th
+              i18n
+              scope="row">
+              TOTAL:
+            </th>
+            <td
+              i18n
+              class="fw-bold">
+              {{"378.82" | currency}}
+            </td>
           </tr>
         </tfoot>
       </table>
