@@ -9,7 +9,7 @@ export class AppComponent {
   title: string = 'Hello and Welcome!';
 
   constructor() {
-    // not sure what this accomplishes yet
+    // used for localization at runtime
     this.title = this.localizeTitle();
   }
 
