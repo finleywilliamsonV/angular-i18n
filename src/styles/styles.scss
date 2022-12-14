@@ -1,0 +1,13 @@
+// Font Imports
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+// Local Imports
+@import "./abstracts";
+
+// Global Styles
+body {
+    min-width: 600px;
+}
+
+// Bootstrap SCSS file.
+@import "~bootstrap/scss/bootstrap";
