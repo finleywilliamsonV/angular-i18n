@@ -257,6 +257,9 @@
           <context context-type="linenumber">70,71</context>
         </context-group>
       </trans-unit>
+
+      <!-- START OF APP TRANSLATIONS -->
+
       <trans-unit id="3374547788655846759" datatype="html">
         <source> Hello and Welcome! </source>
         <target> Olá e Bem-vindo! </target>
