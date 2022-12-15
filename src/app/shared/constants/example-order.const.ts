@@ -30,3 +30,7 @@ export const EXAMPLE_ORDER: Order = [
     price: 28.55,
   },
 ];
+
+// poeditor.com
+const label = $localize`:meaning A|description A@@example A:exampleTranslationA`;
+const label2 = $localize`:meaning A|description A@@example B:exampleTranslationB`;
