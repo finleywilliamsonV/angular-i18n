@@ -8,7 +8,7 @@ export const EXAMPLE_ORDER: Order = [
   {
     date: '12/14/22',
     amount: 12,
-    description: $localize`2" Flat Brushes`,
+    description: $localize`:@@2" Flat Brushes:2" Flat Brushes`,
     price: 8.99,
   },
   {

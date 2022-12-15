@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration=en-US",
+    "start:pt-BR": "ng serve --configuration=pt-BR",
+    "start:ko-KR": "ng serve --configuration=ko-KR",
     "extract-locales": "ng extract-i18n --format=json --output-path src/locale",
     "build": "ng build --localize",
     "watch": "ng build --watch --configuration development",

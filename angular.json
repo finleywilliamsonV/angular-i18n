@@ -7,7 +7,8 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "pt-BR": "src/locale/messages.pt.json"
+          "pt-BR": "src/locale/messages.pt.json",
+          "ko-KR": "src/locale/messages.ko.json"
         }
       },
       "projectType": "application",
@@ -24,7 +25,8 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": [
-              "pt-BR"
+              "pt-BR",
+              "ko-KR"
             ],
             "outputPath": "dist/angular-i18n",
             "index": "src/index.html",
@@ -70,6 +72,21 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "en-US": {
+              "localize": [
+                "en-US"
+              ]
+            },
+            "pt-BR": {
+              "localize": [
+                "pt-BR"
+              ]
+            },
+            "ko-KR": {
+              "localize": [
+                "ko-KR"
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -82,6 +99,15 @@
             },
             "development": {
               "browserTarget": "angular-i18n:build:development"
+            },
+            "en-US": {
+              "browserTarget": "angular-i18n:build:en-US"
+            },
+            "pt-BR": {
+              "browserTarget": "angular-i18n:build:pt-BR"
+            },
+            "ko-KR": {
+              "browserTarget": "angular-i18n:build:ko-KR"
             }
           },
           "defaultConfiguration": "development"
