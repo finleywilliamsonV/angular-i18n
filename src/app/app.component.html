@@ -1,21 +1,17 @@
-<div class="container-fluid">
+<div
+  class="container-fluid"
+  *ngIf="!reloading">
 
   <div class="row mt-5">
     <div class="col text-center">
-      <div
-        i18n="@@page-title"
-        class="display-1">
-        Hello and Welcome!
-      </div>
+      <div class="display-1">{{'page-title' | multi}}</div>
     </div>
   </div>
 
   <div class="row mt-5 text-center">
     <div class="col">
-      <h3
-        i18n="@@page-subheading"
-        [style.font-weight]="'300'">
-        In this app, I'll be exporing Angular's internationalization and localization features
+      <h3 [style.font-weight]="'300'">
+        {{'page-subheading' | multi }}
       </h3>
     </div>
   </div>
@@ -27,31 +23,11 @@
         class="table table-primary table-striped text-center mx-auto table-bordered">
         <thead>
           <tr>
-            <th
-              i18n="@@transaction-label-date"
-              scope="col">
-              Date
-            </th>
-            <th
-              i18n="@@transaction-label-amount"
-              scope="col">
-              Amount
-            </th>
-            <th
-              i18n="@@transaction-label-description"
-              scope="col">
-              Description
-            </th>
-            <th
-              i18n="@@transaction-label-price"
-              scope="col">
-              Price
-            </th>
-            <th
-              i18n="@@transaction-label-subtotal"
-              scope="col">
-              Subtotal
-            </th>
+            <th scope="col">{{'Date' | multi}}</th>
+            <th scope="col">{{'Amount' | multi}}</th>
+            <th scope="col">{{'Description' | multi}}</th>
+            <th scope="col">{{'Price' | multi}}</th>
+            <th scope="col">{{'Subtotal' | multi}}</th>
           </tr>
         </thead>
         <tbody>
@@ -66,11 +42,7 @@
         <tfoot>
           <tr>
             <td colspan="3"></td>
-            <th
-              i18n="@@transaction-label-total"
-              scope="row">
-              TOTAL:
-            </th>
+            <th scope="row">{{'TOTAL' | multi}}:</th>
             <td class="fw-bold">{{getTotal(order) | currency}}</td>
           </tr>
         </tfoot>
@@ -82,11 +54,26 @@
     <div class="col">
       <img
         id="artist-svg"
-        i18n-alt="@@image-alt"
-        alt="image of an artist"
-        i18n-title="@@image-title"
-        title="An Artist"
+        alt="{{'image of an artist' | multi}}"
+        title="{{'An Artist' | multi}}"
         src="assets/artist.svg">
+    </div>
+  </div>
+
+  <div class="row mt-5 text-center">
+    <div class="col">
+      <select
+        id="language-select"
+        class="form-select mx-auto"
+        [(ngModel)]="language">
+        <option
+          selected
+          value="en-US">
+          en-US
+        </option>
+        <option value="pt-BR">pt-BR</option>
+        <option value="ko-KR">ko-KR</option>
+      </select>
     </div>
   </div>
 </div>

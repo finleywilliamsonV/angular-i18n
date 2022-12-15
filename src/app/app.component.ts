@@ -1,6 +1,10 @@
 import { EXAMPLE_ORDER } from './shared/constants/example-order.const';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, ApplicationRef } from '@angular/core';
 import { Order, Transaction } from './shared/models/order.model';
+import { LanguageService } from './src/app/core/services/language.service';
+
+const SUPPORTED_LANGUAGES = ['en-US', 'pt-BR', 'ko-KR'] as const;
+type AvailableLanguage = typeof SUPPORTED_LANGUAGES[number];
 
 @Component({
   selector: 'app-root',
@@ -10,7 +14,10 @@ import { Order, Transaction } from './shared/models/order.model';
 export class AppComponent {
   order: Order = EXAMPLE_ORDER;
 
-  constructor() {}
+  /** hacky, avert your eyes */
+  reloading: boolean = false;
+
+  constructor(private languageService: LanguageService) {}
 
   /**
    * Gets the subtotal for a given transaction
@@ -30,5 +37,25 @@ export class AppComponent {
     return order.reduce((total: number, transaction: Transaction) => {
       return total + this.getSubtotal(transaction);
     }, 0);
+  }
+
+  /**
+   * Gets the language for the application
+   */
+  get language(): AvailableLanguage {
+    return this.languageService.getLanguage();
+  }
+
+  /**
+   * Sets the language for the application
+   */
+  set language(newLanguage: AvailableLanguage) {
+    this.reloading = true;
+
+    this.languageService.setLanguage(newLanguage);
+
+    setTimeout(() => {
+      this.reloading = false;
+    });
   }
 }
