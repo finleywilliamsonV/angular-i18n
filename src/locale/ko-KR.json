@@ -1,0 +1,18 @@
+{
+  "page-title": "안녕하세요. 환영합니다!",
+  "page-subheading": "이 앱에서는 Angular의 국제화 및 현지화 기능을 살펴보겠습니다.",
+  "Date": "날짜",
+  "Amount": "양",
+  "Description": "설명",
+  "Price": "가격",
+  "Subtotal": "소계",
+  "TOTAL": "총",
+  "image of an artist": "예술가의 이미지",
+  "An Artist": "예술가",
+  "2\" Flat Brushes": "2\" 플랫 브러쉬",
+  "Pads of Watercolor Paper": "수채화 용지 패드",
+  "Watercolor Palettes": "수채화 팔레트",
+  "12 Color Watercolor Paint Set": "12색 수채화 물감 세트",
+  "exampleTranslationA": "exampleTranslationA",
+  "exampleTranslationB": "exampleTranslationB"
+}

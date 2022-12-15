@@ -1,0 +1,18 @@
+{
+  "page-title": "Hello and Welcome!",
+  "page-subheading": "In this app, I'll be exporing Angular's internationalization and localization features",
+  "Date": "Date",
+  "Amount": "Amount",
+  "Description": "Description",
+  "Price": "Price",
+  "Subtotal": "Subtotal",
+  "TOTAL": "TOTAL",
+  "image of an artist": "image of an artist",
+  "An Artist": "An Artist",
+  "2\" Flat Brushes": "2\" Flat Brushes",
+  "Pads of Watercolor Paper": "Pads of Watercolor Paper",
+  "Watercolor Palettes": "Watercolor Palettes",
+  "12 Color Watercolor Paint Set": "12 Color Watercolor Paint Set",
+  "exampleTranslationA": "exampleTranslationA",
+  "exampleTranslationB": "exampleTranslationB"
+}
